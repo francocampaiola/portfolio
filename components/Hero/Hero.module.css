@@ -1,0 +1,20 @@
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+    }
+    .avatar {
+        margin-bottom: 25px;
+    }
+}
