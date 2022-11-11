@@ -16,10 +16,10 @@ export const Menu = () => {
                     {
                         menu.map(
                             (item, index) => (
-                                <Button variant={'ghost'} _hover={{
+                                <Button key={index} variant={'ghost'} _hover={{
                                     color: 'blue.500'
                                 }}>
-                                    <Link key={index} href={'#' + item.url}>
+                                    <Link  href={'#' + item.url}>
                                         <Heading fontSize={'sm'}>{item.name}</Heading>
                                     </Link>
                                 </Button>
