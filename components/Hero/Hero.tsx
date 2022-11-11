@@ -16,7 +16,7 @@ export const Hero = () => {
         />
         <Box>
           <Heading as="h1" size="2xl" mb={4} fontWeight={'bold'}>
-            Hi, I'm <strong>Franco Campaiola</strong>
+            Hi, I&apos;m <strong>Franco Campaiola</strong>
           </Heading>
           <Heading as="h2" size="xl" mb={4} fontWeight={'thin'}>
             Software Developer
