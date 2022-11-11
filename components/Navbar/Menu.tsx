@@ -16,9 +16,13 @@ export const Menu = () => {
                     {
                         menu.map(
                             (item, index) => (
-                                <Link key={index} href={'#' + item.url}>
-                                    <Heading fontSize={'sm'}>{item.name}</Heading>
-                                </Link>
+                                <Button variant={'ghost'} _hover={{
+                                    color: 'blue.500'
+                                }}>
+                                    <Link key={index} href={'#' + item.url}>
+                                        <Heading fontSize={'sm'}>{item.name}</Heading>
+                                    </Link>
+                                </Button>
                             ))
                     }
                     <MenuChakra>
