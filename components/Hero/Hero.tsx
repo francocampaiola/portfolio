@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const Hero = () => {
   return (
-    <section className={styles.hero} id={'home'}>
+    <section className={styles.hero} id="home">
       <HStack gap={5}  display={{ md: 'flex' }}>
         <Avatar
           size="4xl"

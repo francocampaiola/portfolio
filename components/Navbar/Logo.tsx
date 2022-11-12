@@ -1,7 +1,10 @@
 import { Heading } from "@chakra-ui/react"
+import Link from "next/link"
 
 export const Logo = () => {
   return (
-    <Heading size={'sm'}>francocampaiola.</Heading>
+    <Link href={'/'}>
+      <Heading size={'sm'}>francocampaiola.</Heading>
+    </Link>
   )
 }

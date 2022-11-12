@@ -7,21 +7,16 @@ export interface Menu {
 export const menu: Menu[] = [
     {
         id: '1',
-        name: 'Home',
-        url: 'home'
-    },
-    {
-        id: '2',
         name: 'About',
         url: 'about'
     },
     {
-        id: '3',
+        id: '2',
         name: 'Projects',
         url: 'projects'
     },
     {
-        id: '4',
+        id: '3',
         name: 'Contact',
         url: 'contact'
     }

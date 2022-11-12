@@ -19,7 +19,7 @@ export const Menu = () => {
                                 <Button key={index} variant={'ghost'} _hover={{
                                     color: 'blue.500'
                                 }}>
-                                    <Link  href={'#' + item.url}>
+                                    <Link href={'#' + item.url}>
                                         <Heading fontSize={'sm'}>{item.name}</Heading>
                                     </Link>
                                 </Button>
@@ -48,6 +48,9 @@ export const Menu = () => {
             </Show>
             <Show below='md'>
                 <HStack>
+                    <Button variant={'ghost'} onClick={toggleColorMode}>
+                        {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                    </Button>
                     <MenuChakra size={'max-width: 500px'}>
                         <MenuButton
                             as={IconButton}
@@ -67,9 +70,6 @@ export const Menu = () => {
                             }
                         </MenuList>
                     </MenuChakra>
-                    <Button variant={'ghost'} onClick={toggleColorMode}>
-                        {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                    </Button>
                 </HStack>
             </Show>
         </>
