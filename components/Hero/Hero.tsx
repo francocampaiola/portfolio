@@ -26,14 +26,14 @@ export const Hero = () => {
               <Button variant={'unstyled'} _hover={{
                 color: 'blue.500'
               }}>
-                <Icon as={TbBrandGithub} boxSize={50} />
+                <Icon as={TbBrandGithub} boxSize={{base: '7', md:'50'}} />
               </Button>
             </Link>
             <Link href={'https://www.linkedin.com/in/francocampaiola/'} target="_blank">
               <Button variant={'unstyled'} _hover={{
                 color: 'blue.500'
               }}>
-                <Icon as={TbBrandLinkedin} boxSize={50} />
+                <Icon as={TbBrandLinkedin} boxSize={{base: '7', md:'50'}} />
               </Button>
             </Link>
           </HStack>
