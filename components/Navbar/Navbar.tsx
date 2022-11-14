@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, HStack, Spacer, useColorModeValue } from "@chakra-ui/react"
 import { Logo } from "./Logo"
 import { Menu } from "./Menu"
 
