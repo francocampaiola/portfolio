@@ -1,9 +1,27 @@
 import Link from 'next/link'
-import { Button, Heading, HStack, useColorMode, Menu as MenuChakra, MenuButton, MenuList, MenuItem, IconButton, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Divider } from '@chakra-ui/react'
-import { ChevronDownIcon, CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { menu } from '../../constants/menu'
+import {
+    Button,
+    Heading,
+    HStack,
+    useColorMode,
+    Menu as MenuChakra,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    IconButton,
+    useDisclosure,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerHeader,
+    DrawerBody,
+    DrawerCloseButton,
+    Divider
+} from '@chakra-ui/react';
+import { ChevronDownIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { SiNotion } from 'react-icons/si'
 import { AiOutlineCloudDownload } from 'react-icons/ai'
+import { menu } from '../../constants/menu'
 
 export const Menu = () => {
 
@@ -22,7 +40,7 @@ export const Menu = () => {
             <IconButton
                 size={'md'}
                 icon={<HamburgerIcon />}
-                aria-label={'Open Menu'}
+                aria-label={'Open menu'}
                 display={{ md: 'none' }}
                 onClick={isOpen ? onClose : onOpen}
             />
@@ -62,7 +80,8 @@ export const Menu = () => {
                 <Drawer
                     isOpen={isOpen}
                     onClose={onClose}
-                    size={'md'}
+                    size={'xs'}
+                    onOverlayClick={onClose}
                 >
                     <DrawerOverlay />
                     <DrawerContent>
@@ -75,12 +94,12 @@ export const Menu = () => {
                                 menu.map((item) => {
                                     return (
                                         <Heading size={'md'} paddingBottom={3} key={item.id}>
-                                            <Link href={`#${item.url}`}>{item.name}</Link>
+                                            <Link href={`#${item.url}`} onClick={onClose}>{item.name}</Link>
                                         </Heading>
                                     )
                                 })
                             }
-                            <Divider orientation='horizontal' marginBottom={'25px'} marginTop={'10px'}/>
+                            <Divider orientation='horizontal' marginBottom={'25px'} marginTop={'10px'} />
                             <MenuChakra>
                                 <MenuButton
                                     as={Button}
