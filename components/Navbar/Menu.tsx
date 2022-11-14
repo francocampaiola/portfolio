@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button, Heading, HStack, useColorMode, Menu as MenuChakra, MenuButton, MenuList, MenuItem, Show, IconButton, useDisclosure, Box, Stack, VStack, Flex, Portal, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody } from '@chakra-ui/react'
+import { Button, Heading, HStack, useColorMode, Menu as MenuChakra, MenuButton, MenuList, MenuItem, IconButton, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, Divider } from '@chakra-ui/react'
 import { ChevronDownIcon, CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { menu } from '../../constants/menu'
 import { SiNotion } from 'react-icons/si'
@@ -21,7 +21,7 @@ export const Menu = () => {
             </Button>
             <IconButton
                 size={'md'}
-                icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                icon={<HamburgerIcon />}
                 aria-label={'Open Menu'}
                 display={{ md: 'none' }}
                 onClick={isOpen ? onClose : onOpen}
@@ -62,21 +62,43 @@ export const Menu = () => {
                 <Drawer
                     isOpen={isOpen}
                     onClose={onClose}
-                    size={'full'}
+                    size={'md'}
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerHeader>Menu</DrawerHeader>
+                        <DrawerHeader>
+                            <DrawerCloseButton />
+                            <Heading size={'xs'}>francocampaiola.</Heading>
+                        </DrawerHeader>
                         <DrawerBody>
                             {
                                 menu.map((item) => {
                                     return (
-                                        <Button variant={'unstyled'} key={item.id}>
+                                        <Heading size={'md'} paddingBottom={3} key={item.id}>
                                             <Link href={item.url}>{item.name}</Link>
-                                        </Button>
+                                        </Heading>
                                     )
                                 })
                             }
+                            <Divider orientation='horizontal' marginBottom={'25px'} marginTop={'10px'}/>
+                            <MenuChakra>
+                                <MenuButton
+                                    as={Button}
+                                    rightIcon={<ChevronDownIcon />}
+                                    width={'100%'}
+                                    fontSize={'md'}
+                                >
+                                    Get Resume
+                                </MenuButton>
+                                <MenuList>
+                                    <MenuItem icon={<SiNotion />} fontSize={'md'}>
+                                        Read in Notion
+                                    </MenuItem>
+                                    <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
+                                        Download PDF
+                                    </MenuItem>
+                                </MenuList>
+                            </MenuChakra>
                         </DrawerBody>
                     </DrawerContent>
                 </Drawer>
