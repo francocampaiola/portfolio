@@ -75,7 +75,7 @@ export const Menu = () => {
                                 menu.map((item) => {
                                     return (
                                         <Heading size={'md'} paddingBottom={3} key={item.id}>
-                                            <Link href={item.url}>{item.name}</Link>
+                                            <Link href={`#${item.url}`}>{item.name}</Link>
                                         </Heading>
                                     )
                                 })
