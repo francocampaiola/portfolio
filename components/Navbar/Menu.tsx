@@ -71,8 +71,8 @@ export const Menu = () => {
                             {
                                 menu.map((item) => {
                                     return (
-                                        <Button variant={'unstyled'}>
-                                            <Link href={item.url} key={item.id}>{item.name}</Link>
+                                        <Button variant={'unstyled'} key={item.id}>
+                                            <Link href={item.url}>{item.name}</Link>
                                         </Button>
                                     )
                                 })
