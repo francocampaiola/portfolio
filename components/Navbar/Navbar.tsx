@@ -17,7 +17,7 @@ export const Navbar = () => {
             >
                 <Logo />
                 <Spacer />
-                <HStack spacing={8} align="center">
+                <HStack spacing={2} align="center">
                     <Menu />
                 </HStack>
             </Flex>
