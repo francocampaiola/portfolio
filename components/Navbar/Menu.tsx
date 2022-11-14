@@ -51,9 +51,11 @@ export const Menu = () => {
                     display={{ base: 'none', md: 'flex' }}
                 >
                     {menu.map((item) => (
-                        <Button variant={'ghost'} key={item.id}>
-                            <Link href={`#${item.url}`}>{item.name}</Link>
-                        </Button>
+                        <Link key={item.id} href={`#${item.url}`}>
+                            <Button variant={'ghost'}>
+                                {item.name}
+                            </Button>
+                        </Link>
                     ))}
                     <MenuChakra>
                         <MenuButton
