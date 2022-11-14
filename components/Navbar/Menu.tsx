@@ -33,8 +33,8 @@ export const Menu = () => {
                     display={{ base: 'none', md: 'flex' }}
                 >
                     {menu.map((item) => (
-                        <Button variant={'ghost'}>
-                            <Link key={item.id} href={`#${item.url}`}>{item.name}</Link>
+                        <Button variant={'ghost'} key={item.id}>
+                            <Link href={`#${item.url}`}>{item.name}</Link>
                         </Button>
                     ))}
                     <MenuChakra>
