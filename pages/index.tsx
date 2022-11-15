@@ -1,13 +1,16 @@
 import { MainLayout } from "../layouts"
 import { Hero } from "../components/Hero/Hero"
 import { About } from '../components/About/About'
+import { ContentLayout } from "../layouts/ContentLayout"
 
 export default function Home() {
   return (
     <>
       <MainLayout>
-        <Hero />
-        <About />
+        <ContentLayout>
+          <Hero />
+          <About />
+        </ContentLayout>
       </MainLayout>
     </>
   )
