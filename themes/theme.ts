@@ -1,11 +1,11 @@
-import { extendTheme } from "@chakra-ui/react";
+import { background, extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
     styles: {
         global: {
             body: {
                 transitionProperty: "all",
-                transitionDuration: "normal"
+                transitionDuration: "normal",
             }
         }
     },
