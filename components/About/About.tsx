@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Image } from '@chakra-ui/react'
+import { Box, Button, Heading, HStack, Image, Spacer } from '@chakra-ui/react'
 import { useState } from 'react';
 import styles from './About.module.css'
 import { LongVersion } from './Versions/LongVersion';
@@ -31,6 +31,7 @@ export const About = () => {
               <>
                 <LongVersion />
                 <Button variant={'solid'} onClick={handleClick}>{buttonText}</Button>
+                <Spacer />
               </>
             ) || (
                 <>

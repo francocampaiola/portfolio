@@ -13,14 +13,8 @@ export const LongVersion = () => {
             <Text fontSize={'md'} marginTop={'20px'}>
                 In previous years, I went through different university degrees such as <Code>Programming</Code> or <Code>Multimedia Design</Code>, but I consider that my forte and what I am passionate about is web development.
             </Text>
-            <Text fontSize={'md'} marginTop={'20px'}>
-                Since <Text as="b">August 2025</Text>, I have been working as a <Text as="em">Systems Analyst</Text> in a Pharmaceutical Laboratory located in Buenos Aires, Argentina.
-            </Text>
-            <Text fontSize={'md'} marginTop={'20px'}>
-                Since <Text as="b">August 2025</Text>, I have been working as a <Text as="em">Systems Analyst</Text> in a Pharmaceutical Laboratory located in Buenos Aires, Argentina.
-            </Text>
             <Text fontSize={'md'} marginTop={'20px'} marginBottom={'30px'}>
-                Since <Text as="b">August 2025</Text>, I have been working as a <Text as="em">Systems Analyst</Text> in a Pharmaceutical Laboratory located in Buenos Aires, Argentina.
+                Since <Text as="b">July 2017</Text>, I have been working as a <Text as="em">Systems Analyst</Text> in a Pharmaceutical Laboratory located in Buenos Aires, Argentina.
             </Text>
         </>
     )
