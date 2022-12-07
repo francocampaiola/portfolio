@@ -13,7 +13,17 @@ export const Projects = () => {
         <Text as="h3" fontWeight={'hairline'} marginTop={2} paddingBottom={5}>A selection of my favorites works</Text>
         {
           projects.map((project, index) => (
-            <ProjectCard key={index} id={project.id} name={project.name} description={project.description} imageSrc={project.image} technologies={project.technologies} />
+            <ProjectCard
+              key={index}
+              id={project.id}
+              name={project.name}
+              description={project.description}
+              category={project.category}
+              imageSrc={project.image}
+              technologies={project.technologies}
+              repository={project.repository}
+              live={project.live}
+            />
           ))
         }
       </section>
