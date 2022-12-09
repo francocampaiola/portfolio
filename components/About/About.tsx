@@ -1,8 +1,8 @@
-import { Box, Button, Heading, HStack, Image, Spacer } from '@chakra-ui/react'
 import { useState } from 'react';
-import styles from './About.module.css'
+import { Box, Button, Center, Heading, HStack, Image, Spacer } from '@chakra-ui/react'
 import { LongVersion } from './Versions/LongVersion';
 import { ShortVersion } from './Versions/ShortVersion';
+import styles from './About.module.css'
 
 export const About = () => {
 
@@ -23,7 +23,7 @@ export const About = () => {
     <>
       <section id="about" className={styles.about}>
         <HStack>
-          <Box w={"65%"}>
+          <Box maxW={{ base: '100%', sm: '65%' }}>
             <Heading justifyItems={'start'} fontWeight={'extrabold'}>
               About me
             </Heading>
@@ -40,7 +40,7 @@ export const About = () => {
                 </>
               )}
           </Box>
-          <Box>
+          <Box display={{ base: 'none', sm: 'block' }}>
             <Image
               src="/about.png"
               alt="about"

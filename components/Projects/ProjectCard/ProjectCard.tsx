@@ -8,11 +8,11 @@ import {
     HStack,
     Image,
     Stack,
-    Text
+    Text,
+    useColorModeValue
 } from '@chakra-ui/react'
 import { RiGithubLine, RiExternalLinkLine } from 'react-icons/ri'
 import React, { FC } from 'react'
-import { projects } from '../../../constants/projects';
 import Link from 'next/link';
 
 interface Props {
@@ -35,6 +35,9 @@ export const ProjectCard: FC<Props> = ({ name, description, category, imageSrc, 
                 marginTop={5}
                 marginBottom={5}
                 borderRadius={'2xl'}
+                maxW={{base: '100%', sm: '100%'}}
+                maxH={{base: '100%', sm: '100%'}}
+                bg={useColorModeValue('gray.200', 'none')}
             >
                 <Image
                     objectFit='cover'
@@ -45,17 +48,17 @@ export const ProjectCard: FC<Props> = ({ name, description, category, imageSrc, 
                 <Stack>
                     <CardBody>
                         <HStack marginBottom={2}>
-                            <Heading size='md'>{name}</Heading>
+                            <Heading size='sm'>{name}</Heading>
                             <Badge
                                 colorScheme={'gray'}
                             >
                                 {category}
                             </Badge>
                         </HStack>
-                        <Text py='2'>
+                        <Text py='2' marginBottom={5}>
                             {description}
                         </Text>
-                        <Heading size={'sm'} marginTop={1}>Technologies</Heading>
+                        <Heading size={'xs'} marginTop={1}>Technologies</Heading>
                         {technologies.map((technology, index) => (
                             <Badge
                                 key={index}
@@ -71,12 +74,12 @@ export const ProjectCard: FC<Props> = ({ name, description, category, imageSrc, 
                     <CardFooter>
                         <Stack direction={'row'} spacing={2}>
                             <Link href={repository} target='_blank'>
-                                <Button leftIcon={<RiGithubLine />} variant='solid' colorScheme='blue' size='sm'>
+                                <Button leftIcon={<RiGithubLine />} variant='solid' colorScheme='blue' size='xs'>
                                     Source
                                 </Button>
                             </Link>
                             <Link href={live} target='_blank'>
-                                <Button leftIcon={<RiExternalLinkLine />} variant='solid' colorScheme='facebook' size='sm'>
+                                <Button leftIcon={<RiExternalLinkLine />} variant='solid' colorScheme='facebook' size='xs'>
                                     Site
                                 </Button>
                             </Link>
