@@ -29,7 +29,7 @@ export const Projects = () => {
             ))
           }
         </Grid>
-        <VStack marginTop={5} marginBottom={5} align={'start'}>
+        <VStack marginTop={5} align={'start'}>
           <Center>
             <Button marginBottom={1} colorScheme={useColorModeValue("blue", "gray")} disabled>
               See all projects

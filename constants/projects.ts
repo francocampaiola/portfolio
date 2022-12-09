@@ -1,5 +1,5 @@
 interface Project {
-    id: string;
+    id: number;
     name: string;
     category: string;
     description: string;
@@ -11,7 +11,7 @@ interface Project {
 
 export const projects: Project[] = [
     {
-        id: '1',
+        id: 1,
         name: 'PokeAPI',
         description: 'Discover and collect your favorite Pokemon with our app. Connect to the Pokemon API and save your favorites for quick access.',
         category: 'app',
@@ -21,7 +21,7 @@ export const projects: Project[] = [
         live: 'https://next-staticapp.vercel.app/'
     },
     {
-        id: '2',
+        id: 2,
         name: 'Expense Control',
         description: 'Application to control budget and expenses in a personal way. Developed with localStorage to keep the information once refreshed.',
         category: 'app',
@@ -31,7 +31,7 @@ export const projects: Project[] = [
         live: 'https://nostalgic-cray-aa09e6.netlify.app/'
     },
     {
-        id: '3',
+        id: 3,
         name: 'Crypto Quote',
         description: 'Applicacion to stay on top of the cryptocurrency market with our real-time quotes app. Track your favorite coins and make the most of your investments.',
         category: 'app',
@@ -41,7 +41,7 @@ export const projects: Project[] = [
         live: 'https://blissful-newton-598445.netlify.app/'
     },
     {
-        id: '4',
+        id: 4,
         name: 'Car Insurance App',
         description: 'Save time and money on your car insurance: compare multiple offers in one place and choose the coverage that fits your needs and budget.',
         category: 'web',

@@ -16,7 +16,8 @@ import {
     DrawerHeader,
     DrawerBody,
     DrawerCloseButton,
-    Divider
+    Divider,
+    Badge
 } from '@chakra-ui/react';
 import { ChevronDownIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { SiNotion } from 'react-icons/si'
@@ -65,8 +66,11 @@ export const Menu = () => {
                             Get Resume
                         </MenuButton>
                         <MenuList>
-                            <MenuItem icon={<SiNotion />} fontSize={'md'} >
+                            <MenuItem icon={<SiNotion />} fontSize={'md'} isDisabled>
                                 Read in Notion
+                                <Badge marginLeft={2} colorScheme={'blue'}>
+                                    Soon
+                                </Badge>
                             </MenuItem>
                             <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
                                 Download PDF
@@ -112,7 +116,7 @@ export const Menu = () => {
                                     Get Resume
                                 </MenuButton>
                                 <MenuList>
-                                    <MenuItem icon={<SiNotion />} fontSize={'md'}>
+                                    <MenuItem icon={<SiNotion />} fontSize={'md'} isDisabled>
                                         Read in Notion
                                     </MenuItem>
                                     <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
