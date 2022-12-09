@@ -16,7 +16,7 @@ import React, { FC } from 'react'
 import Link from 'next/link';
 
 interface Props {
-    id: string;
+    id: number;
     name: string;
     description: string;
     category: string;
