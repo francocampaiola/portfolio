@@ -1,4 +1,4 @@
-import { Badge, Button, FormControl, FormLabel, Input, Textarea, useColorModeValue } from '@chakra-ui/react';
+import { Badge, Button, FormControl, FormLabel, Input, Textarea } from '@chakra-ui/react';
 import { useForm, ValidationError } from '@formspree/react';
 
 export const ContactForm = () => {
@@ -60,7 +60,7 @@ export const ContactForm = () => {
         <Button type='submit' disabled marginTop={2} zIndex={-1} colorScheme={'blue'}>
           Submit
         </Button>
-        <Badge bg={'darkorchid'} color={useColorModeValue("black", "white")} zIndex={'1'} marginLeft={-8} marginTop={-6}>Soon</Badge>
+        <Badge bg={'darkorchid'} zIndex={'1'} marginLeft={-8} marginTop={-6}>Soon</Badge>
       </FormControl>
     </>
   )

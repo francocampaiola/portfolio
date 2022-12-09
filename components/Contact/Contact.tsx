@@ -17,8 +17,8 @@ export const Contact = () => {
                 <Text as="h3" fontWeight={'hairline'} marginTop={'50px'} paddingBottom={2}>You can also reach me out on:</Text>
                 <HStack>
                     {social.map((item, index) =>
-                        <Box bgSize={'contain'}>
-                            <Link href={item.url} key={index} target='_blank'>
+                        <Box bgSize={'contain'} key={index}>
+                            <Link href={item.url} target='_blank'>
                                 <Button variant={'unstyled'}>
                                     <Icon fontSize={25}>
                                         {item.network === 'Github' && <AiFillGithub />}
