@@ -14,9 +14,8 @@ export const Projects = () => {
         <Grid templateColumns={{ base: 'none', sm: 'repeat(2, 1fr)' }} gap={{ base: '0', sm: '2' }}>
           {
             projects.map((project, index) => (
-              <GridItem>
+              <GridItem key={index}> 
                 <ProjectCard
-                  key={index}
                   id={project.id}
                   name={project.name}
                   description={project.description}
