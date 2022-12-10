@@ -72,9 +72,11 @@ export const Menu = () => {
                                     Soon
                                 </Badge>
                             </MenuItem>
-                            <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
-                                Download PDF
-                            </MenuItem>
+                            <Link href="resume.pdf" locale={false} target="_blank">
+                                <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
+                                    Download PDF
+                                </MenuItem>
+                            </Link>
                         </MenuList>
                     </MenuChakra>
                     <Button variant={'ghost'} onClick={toggleColorMode}>
@@ -120,7 +122,11 @@ export const Menu = () => {
                                         Read in Notion
                                     </MenuItem>
                                     <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
-                                        Download PDF
+                                        <Button>
+                                            <Link href="/resume.pdf" locale={false}>
+                                                Download PDF
+                                            </Link>
+                                        </Button>
                                     </MenuItem>
                                 </MenuList>
                             </MenuChakra>
