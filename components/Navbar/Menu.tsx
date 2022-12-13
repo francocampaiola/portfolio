@@ -121,13 +121,11 @@ export const Menu = () => {
                                     <MenuItem icon={<SiNotion />} fontSize={'md'} isDisabled>
                                         Read in Notion
                                     </MenuItem>
-                                    <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
-                                        <Button>
-                                            <Link href="/resume.pdf" locale={false}>
-                                                Download PDF
-                                            </Link>
-                                        </Button>
-                                    </MenuItem>
+                                    <Link href="resume.pdf" locale={false} target="_blank">
+                                        <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
+                                            Download PDF
+                                        </MenuItem>
+                                    </Link>
                                 </MenuList>
                             </MenuChakra>
                         </DrawerBody>
