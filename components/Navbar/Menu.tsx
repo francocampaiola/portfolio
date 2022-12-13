@@ -122,9 +122,11 @@ export const Menu = () => {
                                         Read in Notion
                                     </MenuItem>
                                     <MenuItem icon={<AiOutlineCloudDownload />} fontSize={'md'}>
-                                        <Link href="/resume.pdf" locale={false}>
-                                            Download PDF
-                                        </Link>
+                                        <Button>
+                                            <Link href="/resume.pdf" locale={false}>
+                                                Download PDF
+                                            </Link>
+                                        </Button>
                                     </MenuItem>
                                 </MenuList>
                             </MenuChakra>
